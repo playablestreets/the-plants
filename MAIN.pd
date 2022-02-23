@@ -54,11 +54,11 @@
 #X floatatom -70 590 5 0 0 0 - - -, f 5;
 #X obj -270 350 s plant2;
 #X obj -310 1360 bop.mix;
-#A saved 0 0.76614 -0.795276;
+#A saved 0 0.76614 0.811024;
 #X obj -90 1370 bop.mix;
 #A saved 0 0.76614 0;
 #X obj 150 1380 bop.mix;
-#A saved 0 0.76614 0.850394;
+#A saved 0 0.76614 -0.80315;
 #X obj -240 320 s plant3;
 #X text -210 350 pin 15/A8;
 #X floatatom 170 590 5 0 0 0 - - -, f 5;
