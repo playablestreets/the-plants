@@ -1,14 +1,20 @@
 # the-plants
+
+
+
 when cloning the repo to the pi run the following to load in bop:
 ```
-git submodule update --init --recursive
+cd ~/Desktop
+git clone https://github.com/playablestreets/the-plants
+username: playablestreets@gmail.com
+pass: [see trello]
+cd the-plants
+git submodule update --init --recursive //CONFIRM
 ```
 
-Then to save credentials:
-
+to update:
 ```
-git config --global credential.helper store
+cd ~/Desktop/the-plants
 git pull origin main
 ```
 
-See trello for user and password
