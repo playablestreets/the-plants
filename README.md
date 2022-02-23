@@ -11,4 +11,4 @@ git config --global credential.helper store
 git pull origin main
 ```
 
-See drive for user and password
+See trello for user and password
