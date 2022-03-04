@@ -19,3 +19,4 @@ cd ~/Desktop/the-plants
 git pull origin main
 ```
 
+Purr Data is are reading capacitance from esp32 pins 4(A5), 12(A11) and 15(A8).
