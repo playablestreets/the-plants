@@ -22,7 +22,7 @@ Then run to authenticate:
 ```
 gh auth login
 ```
-username: playablestreets@gmail.com
+username: playablestreets@gmail.com  
 pass: [see trello]
 
 
@@ -74,7 +74,7 @@ purr-data -jack &
 - copy ./config/rc.local to /etc/
 - copy ./config/safe_shutdown_Pi.py to /home/pi/
 
-Reboot to test!
+Reboot to test everything boots up correctly.
 
 
 # Notes
