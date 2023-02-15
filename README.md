@@ -1,29 +1,50 @@
 # the-plants
 
-## cloning
+# Setup
 
-when cloning the repo to the pi run the following to load in bop:
+## Install git
 ```
-cd ~/Desktop
-git config --global credential.helper store
-git clone https://github.com/playablestreets/the-plants
+sudo apt-get install git
+```
+
+## Configure git
+Install gh-cli for authentication
+```
+type -p curl >/dev/null || sudo apt install curl -y
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -y
+```
+
+Then run to authenticate:
+```
+gh auth login
+```
 username: playablestreets@gmail.com
 pass: [see trello]
+
+
+
+## Clone this repository to desktop
+
+To clone to the desktop run the following ( or alternatively use Github Desktop)
+```
+cd ~/Desktop
+git clone https://github.com/playablestreets/the-plants
 cd the-plants
 git submodule update --init --recursive
 ```
 
-to update:
+To update run:
 ```
 cd ~/Desktop/the-plants
 git pull origin main
 ```
 
-Purr Data is are reading capacitance from esp32 pins 4(A5), 12(A11) and 15(A8).
 
-
-## Setting up Pi
-### Install and configure Jack
+## Install and configure Jack
 ```
 sudo apt-get install qjackctl
 
@@ -34,7 +55,7 @@ qjackctl --start &
 Set up correct audio outputs etc in Jack.
 
 
-### Install Purr-Data
+## Install Purr-Data
 ```
 echo 'deb http://download.opensuse.org/repositories/home:/aggraef/Raspbian_10/ /' | sudo tee /etc/apt/sources.list.d/home:aggraef.list
 curl -fsSL https://download.opensuse.org/repositories/home:aggraef/Raspbian_10/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_aggraef.gpg > /dev/null
@@ -47,7 +68,7 @@ Open Purr Data and check audio out to Jack is working, Midi in if required. More
 purr-data -jack &
 ```
 
-### Copy configuration files
+## Copy configuration files
 
 - copy ./config/autostart to /etc/xdg/lxsession/LXDE-pi/
 - copy ./config/rc.local to /etc/
@@ -56,7 +77,7 @@ purr-data -jack &
 Reboot to test!
 
 
-## Notes
+# Notes
 -- Automatic start of PD patch --
 
 The config file /etc/xdg/lxsession/LXDE-pi/autostart determines which PD patch will be loaded on boot. You can edit the last line to choose a different patch.
@@ -72,3 +93,6 @@ You can connect a momentary button between pins 37 (GPIO26) and 39 (GND) for use
 
 Please press the shutdown button for about 1 second to make sure it registers.
 
+-- ESP32 capacitance --
+
+Purr Data is reading capacitance from esp32 pins 4(A5), 12(A11) and 15(A8).
