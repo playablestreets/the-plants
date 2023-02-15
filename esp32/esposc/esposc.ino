@@ -1,3 +1,8 @@
+//Required libraries:
+// - AutoConnect (Hieromon Ikasamo)
+// - OSC (Adrian Freed)
+
+
 #include <WiFi.h>
 #include <WebServer.h>
 #include <AutoConnect.h>
