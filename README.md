@@ -2,31 +2,6 @@
 
 # Setup
 
-## Install git
-```
-sudo apt-get install git
-```
-
-## Configure git
-Install gh-cli for authentication
-```
-type -p curl >/dev/null || sudo apt install curl -y
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-&& sudo apt update \
-&& sudo apt install gh -y
-```
-
-Then run to authenticate:
-```
-gh auth login
-```
-username: playablestreets@gmail.com  
-pass: [see trello]
-
-
-
 ## Clone this repository to desktop
 
 To clone to the desktop run the following ( or alternatively use Github Desktop)
@@ -78,7 +53,7 @@ Reboot to test everything boots up correctly.
 
 
 # Notes
--- Automatic start of PD patch --
+## Automatic start of PD patch
 
 The config file /etc/xdg/lxsession/LXDE-pi/autostart determines which PD patch will be loaded on boot. You can edit the last line to choose a different patch.
 e.g, you could change
@@ -86,7 +61,8 @@ e.g, you could change
 to
 @purr-data -jack /home/pi/Desktop/example.pd
 
--- Automatic shutdown script --
+
+## Automatic shutdown script
 
 A safe-shutdown Python script is automatically loaded on boot (~/safe_shutdown_Pi.py loaded by /etc/rc.local). This sets a pull-up on pin number 37 (aka GPIO26) and monitors it: If the pin is pulled to ground, the script will shut down the system. 
 You can connect a momentary button between pins 37 (GPIO26) and 39 (GND) for use as a safe shutdown button.
