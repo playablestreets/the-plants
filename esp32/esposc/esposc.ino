@@ -4,11 +4,11 @@
 
 
 #include <WiFi.h>
-#include <WebServer.h>
-#include <AutoConnect.h>
+// #include <WebServer.h>
+// #include <AutoConnect.h>
 
-WebServer Server;          
-AutoConnect Portal(Server);
+// WebServer Server;          
+// AutoConnect Portal(Server);
 
 #ifdef BOARD_HAS_USB_SERIAL
 #include <SLIPEncodedUSBSerial.h>
@@ -31,7 +31,6 @@ WiFiUDP Udp;                                // A UDP instance to let us send and
 const IPAddress outIp(255, 255, 255, 255);     // remote IP of your computer
 const unsigned int outPort = 8000;          // remote port to receive OSC
 const unsigned int localPort = 9000;        // local port to listen for OSC packets 
-//String ipString = "";
 String macString = "";
 String oscAddress;
 
@@ -47,10 +46,10 @@ typedef struct
 TouchInput touchInputs[NUMTOUCHPINS];
 int touchPins[NUMTOUCHPINS] = {4, 15, 13, 12, 14, 27, 32, 33};
 
-void rootPage() {
-  char content[] = "Hello, world";
-  Server.send(200, "text/plain", content);
-}
+// void rootPage() {
+//   char content[] = "Hello, world";
+//   Server.send(200, "text/plain", content);
+// }
 
 void setup() {
   delay(1000);
@@ -58,7 +57,7 @@ void setup() {
   //begin SLIPSerial just like Serial
   SLIPSerial.begin(115200);   // set this as high as you can reliably run on your platform
   Serial.println("setting up pins...");
-//  SLIPSerial.println("setting up pins...");
+  SLIPSerial.println("setting up pins...");
 
   for(int i = 0; i < NUMTOUCHPINS; i++){
     touchInputs[i].pin = touchPins[i];
@@ -79,18 +78,18 @@ void setup() {
   oscAddress = "/" + macString + "/touches";
   Serial.println("I will output osc to " + oscAddress + " on port 8000 as well as over serial.");
 
-  Server.on("/", rootPage);
-  if (Portal.begin()) {
-    Serial.println("WiFi connected: " + WiFi.localIP().toString()); //this line was hanging
+  // Server.on("/", rootPage);
+  // if (Portal.begin()) {
+  //   Serial.println("WiFi connected: " + WiFi.localIP().toString()); //this line was hanging
     
-    Serial.println("Starting UDP");
-    Udp.begin(localPort);
-    Serial.println("Started!");
-  }
+  //   Serial.println("Starting UDP");
+  //   Udp.begin(localPort);
+  //   Serial.println("Started!");
+  // }
 }
 
 void loop() {
-    Portal.handleClient();
+    // Portal.handleClient();
     delay(25);
     bool changeDetected = false;
     
@@ -103,9 +102,9 @@ void loop() {
     if(changeDetected){
       OSCMessage msg(oscAddress.c_str());
       for(int i = 0; i < NUMTOUCHPINS; i++) msg.add( touchInputs[i].currentValue );
-      Udp.beginPacket(outIp, outPort);
-      msg.send(Udp);
-      Udp.endPacket();
+      // Udp.beginPacket(outIp, outPort);
+      // msg.send(Udp);
+      // Udp.endPacket();
       SLIPSerial.beginPacket();
       msg.send(SLIPSerial);
       SLIPSerial.endPacket();

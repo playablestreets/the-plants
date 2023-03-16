@@ -1,4 +1,4 @@
-#N canvas -7 0 768 778 10;
+#N canvas 85 50 370 333 10;
 #X declare -path ./bop;
 #X msg 140 109 \; pd dsp \$1;
 #X msg 140 86 1;
@@ -9,7 +9,7 @@
 #X obj 40 40 loadbang;
 #X obj 40 70 del 5000;
 #X obj 140 40 declare -path ./bop;
-#N canvas 0 0 450 300 read-sensors 0;
+#N canvas 673 396 435 318 read-sensors 0;
 #X obj 40 80 loadbang;
 #X msg 40 107 1;
 #X text 110 440 pin 4/A5;
@@ -28,6 +28,7 @@
 #X obj 40 269 zl slice 1;
 #X obj 40 350 unpack 0 0 0 0 0 0 0 0, f 32;
 #X text 160 380 pin 12/A11;
+#X msg 74 110 5;
 #X connect 0 0 1 0;
 #X connect 1 0 13 0;
 #X connect 7 0 8 0;
@@ -42,8 +43,9 @@
 #X connect 16 0 3 0;
 #X connect 16 1 4 0;
 #X connect 16 3 5 0;
+#X connect 18 0 13 0;
 #X restore 140 170 pd read-sensors;
-#N canvas 760 -8 770 787 the-plants-bop-sketch 0;
+#N canvas 457 10 728 820 the-plants-bop-sketch 0;
 #X text 1400 1840 comment;
 #X floatatom 51 221 5 0 0 0 - - -, f 5;
 #X obj 280 1050 bop.reverb;

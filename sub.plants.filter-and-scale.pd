@@ -1,4 +1,4 @@
-#N canvas 2 66 1022 677 10;
+#N canvas 440 28 1009 698 10;
 #X declare -path /home/pi/Desktop/bop;
 #X floatatom 141 480 5 0 0 0 - - -, f 5;
 #X floatatom 41 480 5 0 0 0 - - -, f 5;
@@ -27,17 +27,19 @@
 #000000 #000000;
 #X floatatom 81 530 5 0 0 1 sensitivity - -, f 5;
 #X obj 13 26 inlet;
-#X obj 13 726 outlet;
+#X obj 39 688 outlet;
 #X obj 200 150 declare -path /home/pi/Desktop/bop;
 #X obj 41 510 /;
 #X obj 41 260 < 5;
 #X obj 141 440 sub.bop.util.slide 50 2000;
 #X obj 41 550 pow 1.6;
 #X obj 41 580 mavg 3;
-#X obj 42 656 scale 0.85 0.4 0 1;
+#X obj 260 660 sub.bop.util.scale 0.85 0.4 0 1;
+#X obj 40 660 scale 0.85 0.4 0 1;
+#X text 260 627 windows might require this...;
 #X connect 0 0 27 1;
 #X connect 1 0 27 0;
-#X connect 4 0 32 0;
+#X connect 4 0 33 0;
 #X connect 5 0 30 0;
 #X connect 6 0 7 0;
 #X connect 7 0 28 0;
@@ -65,4 +67,4 @@
 #X connect 29 0 0 0;
 #X connect 30 0 31 0;
 #X connect 31 0 4 0;
-#X connect 32 0 25 0;
+#X connect 33 0 25 0;
