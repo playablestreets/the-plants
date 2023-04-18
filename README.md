@@ -1,6 +1,12 @@
-# the-plants
+# the-plants Recital Centre 2023
 
 # Setup
+
+```
+!!! IMPORTANT
+!!! this is a modified version of the plants for the recital centre 2023.
+!!! Rename the desired PD patch/instrument to MAIN.pd to enable start on boot.
+```
 
 ## Clone this repository to desktop
 
