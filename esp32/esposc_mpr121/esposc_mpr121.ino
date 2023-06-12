@@ -50,7 +50,9 @@ int touchPins[NUMTOUCHPINS] = {4, 15, 13, 12, 14, 27, 32, 33};
 #include <Wire.h>
 #include "Adafruit_MPR121.h"
 bool usingMPRTouch = true;
-Adafruit_MPR121 cap = Adafruit_MPR121();
+int i2cADDR[] = {0x5A, 0x5C};
+Adafruit_MPR121 capLeft = Adafruit_MPR121();  // ADDR not connected: 0x5A
+Adafruit_MPR121 capRight = Adafruit_MPR121(); // ADDR tied to SDA:   0x5C
 
 
 // void rootPage() {
@@ -73,11 +75,27 @@ void setup() {
   }
 
   if (usingMPRTouch) {
-    if (!cap.begin(0x5A)) {
-      Serial.println("MPR121 not found, check wiring?");
-      while (1);
+    bool capLeft_connected = false;
+    while (!capLeft_connected) {
+      if (!capLeft.begin(0x5A)) {
+        Serial.println("Left MPR121 not found, check wiring?");
+        delay(100);
+      } else {
+        Serial.println("Left MPR121 found!");
+        capLeft_connected = true;
+      }
     }
-    Serial.println("MPR121 found!");
+
+    bool capRight_connected = false;
+    while (!capRight_connected) {
+      if (!capRight.begin(0x5C)) {
+        Serial.println("Right MPR121 not found, check wiring?");
+        delay(100);
+      } else {
+        Serial.println("Right MPR121 found!");
+        capRight_connected = true;
+      }
+    }
   }
 
 
@@ -108,19 +126,31 @@ void loop() {
   delay(25);
   bool changeDetected = false;
 
-  for (int i = 0; i < NUMTOUCHPINS; i++) {
+  if (usingMPRTouch) {
+    // Read Touch Inputs from Left and Right MPR121 boards
+    touchInputs[0].currentValue = capLeft.filteredData(0);
+    touchInputs[1].currentValue = capRight.filteredData(0);
 
-    if (usingMPRTouch) {
-      // Using MPR Touch Breakout Board connected via I2C
-      touchInputs[i].currentValue = 2048 - cap.filteredData(i); // Other options: cap.baselineData(i) | cap.touched()
-    } else {
-      // Using ESP32 onboard cap touch
-      touchInputs[i].currentValue = touchRead(touchInputs[i].pin);
+    // Check for Changes
+    if ( touchInputs[0].currentValue != touchInputs[0].lastValue ||
+         touchInputs[1].currentValue != touchInputs[1].lastValue) {
+      changeDetected = true;
     }
 
-    // Compare and update History Value
-    if ( touchInputs[i].currentValue != touchInputs[i].lastValue ) changeDetected = true;
-    touchInputs[i].lastValue = touchInputs[i].currentValue;
+    // Update History Value
+    touchInputs[0].lastValue = touchInputs[0].currentValue;
+    touchInputs[1].lastValue = touchInputs[1].currentValue;
+  }
+  else {
+    // Using ESP32 onboard cap touch
+    for (int i = 0; i < NUMTOUCHPINS; i++) {
+      // Read Touch from ESP
+      touchInputs[i].currentValue = touchRead(touchInputs[i].pin);
+
+      // Compare and update History Value
+      if ( touchInputs[i].currentValue != touchInputs[i].lastValue ) changeDetected = true;
+      touchInputs[i].lastValue = touchInputs[i].currentValue;
+    }
   }
 
   if (changeDetected) {
