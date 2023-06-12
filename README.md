@@ -72,3 +72,8 @@ Please press the shutdown button for about 1 second to make sure it registers.
 ## ESP32 capacitance
 
 Purr Data is reading capacitance from esp32 pins 4(A5), 12(A11) and 15(A8).
+
+Required Libraries:
+ - AutoConnect (Hieromon Ikasamo)
+ - OSC (Adrian Freed)
+ - Adafruit_MPR121 (Adafruit) [optional]

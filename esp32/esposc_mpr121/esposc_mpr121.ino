@@ -1,6 +1,7 @@
 //Required libraries:
 // - AutoConnect (Hieromon Ikasamo)
 // - OSC (Adrian Freed)
+// - Adafruit_MPR121 (Adafruit)
 
 
 #include <WiFi.h>
