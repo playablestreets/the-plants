@@ -1,4 +1,4 @@
-#N canvas 440 28 1009 698 10;
+#N canvas 16 139 812 698 10;
 #X declare -path /home/pi/Desktop/bop;
 #X floatatom 141 480 5 0 0 0 - - -, f 5;
 #X floatatom 41 480 5 0 0 0 - - -, f 5;
@@ -9,7 +9,7 @@
 #X obj 40 186 -;
 #X obj 40 221 abs;
 #X obj 41 360 float, f 11;
-#X obj 41 80 t f f b f, f 11;
+#X obj 41 95 t f f b f, f 11;
 #X obj 59 149 float;
 #X obj 41 290 sel 1 0;
 #X obj 61 320 bng 15 250 50 0 empty empty SPIKE! 17 7 0 10 #fcfcfc
@@ -26,7 +26,7 @@
 #X obj 237 325 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X floatatom 81 530 5 0 0 1 sensitivity - -, f 5;
-#X obj 13 26 inlet;
+#X obj 42 23 inlet;
 #X obj 39 688 outlet;
 #X obj 200 150 declare -path /home/pi/Desktop/bop;
 #X obj 41 510 /;
@@ -37,6 +37,8 @@
 #X obj 260 660 sub.bop.util.scale 0.85 0.4 0 1;
 #X obj 40 660 scale 0.85 0.4 0 1;
 #X text 260 627 windows might require this...;
+#X obj 41 63 scale 55 150 15 30;
+#X text 168 62 scaling for MPR121;
 #X connect 0 0 27 1;
 #X connect 1 0 27 0;
 #X connect 4 0 33 0;
@@ -61,10 +63,11 @@
 #X connect 21 0 22 0;
 #X connect 22 0 17 0;
 #X connect 23 0 30 1;
-#X connect 24 0 9 0;
+#X connect 24 0 35 0;
 #X connect 27 0 5 0;
 #X connect 28 0 11 0;
 #X connect 29 0 0 0;
 #X connect 30 0 31 0;
 #X connect 31 0 4 0;
 #X connect 33 0 25 0;
+#X connect 35 0 9 0;

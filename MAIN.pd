@@ -45,7 +45,7 @@
 #X connect 16 3 5 0;
 #X connect 18 0 13 0;
 #X restore 140 170 pd read-sensors;
-#N canvas 457 10 728 820 the-plants-bop-sketch 0;
+#N canvas 218 74 728 820 the-plants-bop-sketch 1;
 #X text 1400 1840 comment;
 #X floatatom 51 221 5 0 0 0 - - -, f 5;
 #X obj 280 1050 bop.reverb;
