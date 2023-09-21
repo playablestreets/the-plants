@@ -1,11 +1,11 @@
-#N canvas 626 237 748 399 10;
-#X declare -path ./bop;
-#X obj 289 217 cnv 15 118 64 empty empty empty 20 12 0 14 #caffcb #404040 0;
+#N canvas 678 163 748 399 10;
+#X obj 289 217 cnv 15 118 64 empty empty empty 20 12 0 14 #caffcb #404040
+0;
 #X obj 539 182 s calibrate;
-#X obj 46 311 bng 56 250 50 0 calibrate calibrate calibrate 0 27 0 10 #fcfcfc #000000 #000000;
+#X obj 46 311 bng 56 250 50 0 calibrate calibrate calibrate 0 27 0
+10 #fcfcfc #000000 #000000;
 #X obj 539 123 loadbang;
 #X obj 539 153 del 5000;
-#X obj 549 279 declare -path ./bop;
 #N canvas 206 206 435 318 read-sensors 0;
 #X obj 40 80 loadbang;
 #X msg 40 107 1;
@@ -39,17 +39,19 @@
 #X connect 15 1 4 0;
 #X connect 16 0 12 0;
 #X restore 295 325 pd read-sensors;
-#N canvas 114 262 697 538 bop-sketch 0;
-#X obj 50 50 plants.soprano;
+#N canvas 114 262 357 193 bop-sketch 0;
+#X obj 50 50 plants.tenor;
 #X restore 301 242 pd bop-sketch;
-#X obj 49 123 vradio 15 0 1 4 from-select-instrument to-select-instrument empty 0 -8 0 10 #fcfcfc #000000 #000000 3;
+#X obj 49 123 vradio 15 0 1 4 from-select-instrument to-select-instrument
+empty 0 -8 0 10 #fcfcfc #000000 #000000 1;
 #X text 69 120 bass;
 #X text 68 139 tenor;
 #X text 68 154 alto;
 #X text 68 169 soprano;
 #X text 139 121 SELECT INSTRUMENT AND SAVE PATCH, f 16;
 #X msg 301 119 0;
-#X obj 301 176 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 301 176 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 119 318 r plant1;
 #X obj 181 317 r plant2;
 #N canvas 510 37 747 750 instrument-loading 0;
@@ -76,7 +78,8 @@
 #X obj 43 387 spigot 1;
 #X obj 76 358 inlet;
 #X obj 123 355 outlet;
-#X obj 44 361 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 44 361 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
 #X obj 44 254 t 1 b f b, f 12;
 #X msg 168 310 \; pd dsp 0;
 #X obj 41 446 t b b f b, f 89;
@@ -118,14 +121,17 @@
 #X connect 26 3 1 0;
 #X restore 301 147 pd instrument-loading;
 #X text 330 120 < CANCEL INSTRUMENT LOADING;
-#X floatatom 119 343 5 0 0 0 - - - 0;
-#X floatatom 181 343 5 0 0 0 - - - 0;
-#X obj 48 218 hsl 128 15 0 1 0 0 plant1-slider empty plant1-slider -2 -8 0 10 #ff8080 #000000 #000000 0 1;
-#X obj 49 254 hsl 128 15 0 1 0 0 plant2-slider empty plant2-slider -2 -8 0 10 #acffac #000000 #000000 0 1;
-#X obj 214 25 cnv 15 306 49 empty empty 🪴\ THE\ PLANTS\ 🪴 20 12 0 30 #fcffff #404040 0;
+#X floatatom 119 343 5 0 0 0 - - -, f 5;
+#X floatatom 181 343 5 0 0 0 - - -, f 5;
+#X obj 48 218 hsl 128 15 0 1 0 0 plant1-slider empty plant1-slider
+-2 -8 0 10 #ff8080 #000000 #000000 0 1;
+#X obj 49 254 hsl 128 15 0 1 0 0 plant2-slider empty plant2-slider
+-2 -8 0 10 #acffac #000000 #000000 0 1;
+#X obj 214 25 cnv 15 306 49 empty empty 🪴\ THE\ PLANTS\ 🪴 20
+12 0 30 #fcffff #404040 0;
 #X connect 3 0 4 0;
 #X connect 4 0 1 0;
-#X connect 14 0 18 0;
+#X connect 13 0 17 0;
+#X connect 15 0 19 0;
 #X connect 16 0 20 0;
-#X connect 17 0 21 0;
-#X connect 18 0 15 0;
+#X connect 17 0 14 0;
