@@ -1,4 +1,4 @@
-#N canvas 351 37 768 778 10;
+#N canvas 1931 578 1221 1085 10;
 #X declare -path ./bop;
 #X obj 140 40 declare -path ./bop;
 #X text 1400 1879 comment;
@@ -17,7 +17,7 @@
 #A saved 1.41304 0 3.51358;
 #X obj 280 419 bop.notefx;
 #A saved -0.146341 -0.878049 0 0 100 127 1 0 0;
-#X obj 280 579 bop.glok;
+#X obj 280 650 bop.glok;
 #A saved 1;
 #X obj 510 319 bop.noteslider;
 #A saved 1.20109 0 3.70624;
@@ -52,7 +52,7 @@
 #X obj 50 89 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #ff8080
 #000000 #000000 0 1;
 #X obj 280 89 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #acffac
-#000000 #000000 0 1;
+#000000 #000000 5950 1;
 #X obj 510 89 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #8cc6ff
 #000000 #000000 0 1;
 #X obj 280 119 s plant2-slider;

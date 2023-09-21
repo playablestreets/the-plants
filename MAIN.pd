@@ -1,4 +1,4 @@
-#N canvas 36 108 836 681 10;
+#N canvas 488 316 836 681 10;
 #X declare -path ./bop;
 #X msg 138 244 \; pd dsp \$1;
 #X msg 138 221 1;
@@ -45,8 +45,8 @@
 #X connect 16 3 5 0;
 #X connect 18 0 13 0;
 #X restore 138 305 pd read-sensors;
-#N canvas 423 238 697 488 bop-sketch 0;
-#X obj 50 50 plants.tenor;
+#N canvas 423 240 697 538 bop-sketch 0;
+#X obj 50 50 plants.alto;
 #X restore 37 345 pd bop-sketch;
 #X obj 341 587 s pd-bop-sketch;
 #X msg 733 534 clear;
@@ -55,7 +55,7 @@
 #X obj 339 79 sel 49 50 51 52;
 #X obj 528 80 sel 115 117;
 #X obj 41 43 vradio 15 0 1 4 from-select-instrument to-select-instrument
-empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
+empty 0 -8 0 10 #fcfcfc #000000 #000000 2;
 #X msg 340 113 0;
 #X msg 372 112 1;
 #X msg 404 114 2;
