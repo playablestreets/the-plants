@@ -1,7 +1,7 @@
 #N canvas 123 101 1064 755 10;
 #X declare -path ./bop;
 #X declare -path ./pdfm;
-#X obj 140 40 declare -path ./bop;
+#X obj 56 36 declare -path ./bop;
 #X obj 64 951 bop.reverb;
 #A saved 0.884783 0.891304 1.8913 0.353261 1 0 0;
 #X obj 64 367 bop.noteslider;
@@ -22,10 +22,14 @@
 #X obj 196 562 pack;
 #X obj 119 241 hsl 128 15 0 1 0 0 empty plant1-slider r\ plant1-slider -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 285 517 sub.bop.util.scale 0.07 1 0 1;
-#X obj 140 69 declare -path ./pdfm;
+#X obj 56 65 declare -path ./pdfm;
 #X text 578 1270 comment;
 #X obj 604 86 fm-operator;
 #A saved 0 1 1 1 0 0 0.01 0.5 0.8 0.2 0 0 1;
+#X obj 213 34 inlet;
+#X obj 213 64 == \$1;
+#X obj 213 120 switch~;
+#X obj 213 90 tgl 16 0 empty empty ENABLE 20 10 0 10 #00ff04 #000000 #000000 0 1;
 #X connect 1 0 7 0;
 #X connect 1 1 7 1;
 #X connect 2 2 13 0;
@@ -46,3 +50,6 @@
 #X connect 15 0 10 2;
 #X connect 16 0 4 0;
 #X connect 17 0 11 0;
+#X connect 21 0 22 0;
+#X connect 22 0 24 0;
+#X connect 24 0 23 0;
