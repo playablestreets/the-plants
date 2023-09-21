@@ -1,5 +1,6 @@
-#N canvas 702 93 768 778 10;
+#N canvas 392 94 768 778 10;
 #X declare -path ./bop;
+#X declare -path ./pdfm;
 #X obj 140 40 declare -path ./bop;
 #X text 1386 1895 comment;
 #X floatatom 37 276 5 0 0 0 - - - 0;
@@ -33,6 +34,9 @@
 #X obj 87 514 + 12;
 #X obj 54 239 hsl 128 15 0 1 0 0 empty plant1-slider r\ plant1-slider -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 279 243 hsl 128 15 0 1 0 0 empty plant2-slider r\ plant2-slider -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 147 68 declare -path ./pdfm;
+#X obj 510 142 fm-operator;
+#A saved 0 1 1 1 0 0 0.01 0.5 0.8 0.2 0 0 1;
 #X connect 2 0 5 0;
 #X connect 3 0 17 0;
 #X connect 3 1 17 1;

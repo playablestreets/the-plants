@@ -1,4 +1,4 @@
-#N canvas 123 101 768 677 10;
+#N canvas 123 101 1064 755 10;
 #X declare -path ./bop;
 #X declare -path ./pdfm;
 #X obj 140 40 declare -path ./bop;
@@ -7,11 +7,11 @@
 #X obj 64 367 bop.noteslider;
 #A saved 1.37772 0 3.70624;
 #X msg 64 339 noteslider \$1;
-#X floatatom 65 250 5 0 0 0 - - -, f 5;
+#X floatatom 65 250 5 0 0 0 - - - 0;
 #X obj 64 199 sub.plants.filter-and-scale;
-#X floatatom 84 178 5 0 0 0 - - -, f 5;
+#X floatatom 84 178 5 0 0 0 - - - 0;
 #X obj 64 1157 dac~, f 34;
-#X floatatom 64 312 5 0 0 0 - - -, f 5;
+#X floatatom 64 312 5 0 0 0 - - - 0;
 #X obj 65 280 expr if($f1 < 0.07 \, 0 \, 0.07);
 #X obj 64 642 bop.casio;
 #A saved 2.28261 0 0 0.01 0.793478 0.228261 1 0.266304 0 0 0;
@@ -20,11 +20,12 @@
 #X obj 196 512 unpack;
 #X obj 196 537 - 12;
 #X obj 196 562 pack;
-#X obj 119 241 hsl 128 15 0 1 0 0 empty plant1-slider r\ plant1-slider
--2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 119 241 hsl 128 15 0 1 0 0 empty plant1-slider r\ plant1-slider -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 285 517 sub.bop.util.scale 0.07 1 0 1;
 #X obj 140 69 declare -path ./pdfm;
 #X text 578 1270 comment;
+#X obj 604 86 fm-operator;
+#A saved 0 1 1 1 0 0 0.01 0.5 0.8 0.2 0 0 1;
 #X connect 1 0 7 0;
 #X connect 1 1 7 1;
 #X connect 2 2 13 0;
