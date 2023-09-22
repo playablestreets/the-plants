@@ -1,3 +1,6 @@
 [submodule "bop"]
 	path = bop
 	url = https://github.com/zealtv/bop
+[submodule "pdfm"]
+	path = pdfm
+	url = https://github.com/zealtv/pdfm.git
