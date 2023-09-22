@@ -18,7 +18,6 @@ def watch_for_shutdown_file():
             os.remove(update_file)
             print("UPDATE!")
             os.system(update_script)
-            break
 
         time.sleep(5)
 
