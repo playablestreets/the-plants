@@ -1,4 +1,4 @@
-#N canvas 303 227 817 396 10;
+#N canvas 53 176 817 396 10;
 #X obj 318 120 cnv 15 450 90 empty empty empty 20 12 0 14 #caffcb #404040 0;
 #X obj 62 252 vradio 15 0 1 4 from-select-instrument to-select-instrument empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 51 124 hsl 250 30 0 1 0 0 plant1-slider empty plant1-slider -2 -8 0 10 #ff8080 #000000 #000000 0 1;
@@ -8,7 +8,7 @@
 #X obj 689 290 s calibrate;
 #X obj 679 241 loadbang;
 #X obj 689 266 del 5000;
-#N canvas 206 206 533 492 read-sensors 0;
+#N canvas 76 241 533 492 read-sensors 0;
 #X obj 40 80 loadbang;
 #X msg 40 107 1;
 #X text 110 420 pin 4/A5;
@@ -79,11 +79,13 @@
 #X obj 591 264 bng 56 250 50 0 calibrate calibrate calibrate 0 27 0 10 #fcfcfc #000000 #000000;
 #X floatatom 521 284 5 0 0 0 plant1: plant1 - 0;
 #X floatatom 521 308 5 0 0 0 plant2: plant2 - 0;
-#X text 179 252 [0] SHUTDOWN [+] SAVE [*] UPDATE;
 #X text 79 252 [1] bass;
 #X text 79 267 [2] tenor;
 #X text 79 282 [3] alto;
 #X text 79 297 [4] soprano;
+#X text 179 252 [0] SHUTDOWN;
+#X text 179 270 [+] SAVE;
+#X text 179 288 [*] UPDATE;
 #X connect 7 0 8 0;
 #X connect 7 0 16 0;
 #X connect 8 0 6 0;
