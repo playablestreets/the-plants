@@ -5,6 +5,6 @@ git pull
 cd config
 echo "copying scripts"
 ./copyscripts.sh
-sleep 5
 echo "rebooting in 5 seconds..."
+sleep 5
 systemctl reboot
