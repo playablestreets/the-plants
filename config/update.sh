@@ -2,6 +2,8 @@
 cd /home/pi/Desktop/the-plants
 echo "pulling from git"
 git pull
+echo "updating submodules"
+git submodule update --init --recursive
 cd config
 echo "copying scripts"
 ./copyscripts.sh
