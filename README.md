@@ -46,8 +46,7 @@ purr-data -jack &
 ## Copy configuration files
 
 - copy ./config/autostart to /etc/xdg/lxsession/LXDE-pi/
-- copy ./config/rc.local to /etc/
-- copy ./config/safe_shutdown_Pi.py to /home/pi/
+- ./config/copyscripts.sh will do this for you.
 
 Reboot to test everything boots up correctly.
 
