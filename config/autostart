@@ -2,5 +2,5 @@
 @pcmanfm --desktop --profile LXDE-pi
 @xscreensaver -no-splash
 @qjackctl --start
-@purr-data -jack /home/pi/Desktop/the-plants/MAIN.pd
 @lxterminal -e python3  /home/pi/Desktop/the-plants/config/plants.watcher.py
+@purr-data -jack /home/pi/Desktop/the-plants/MAIN.pd
