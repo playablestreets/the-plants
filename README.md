@@ -8,14 +8,12 @@ To clone to the desktop run the following ( or alternatively use Github Desktop)
 ```
 cd ~/Desktop
 git clone https://github.com/playablestreets/the-plants
-cd the-plants
-git submodule update --init --recursive
 ```
 
-To update run:
+To press * on the keypad or run:
 ```
-cd ~/Desktop/the-plants
-git pull origin main
+cd ~/Desktop/the-plants/config
+./update.sh
 ```
 
 
@@ -44,9 +42,13 @@ purr-data -jack &
 ```
 
 ## Copy configuration files
+```
+cd ~/Desktop/the-plants/config
+./copyscripts.sh
+```
 
-- copy ./config/autostart to /etc/xdg/lxsession/LXDE-pi/
-- ./config/copyscripts.sh will do this for you.
+This will copy ./config/autostart to /etc/xdg/lxsession/LXDE-pi/
+
 
 Reboot to test everything boots up correctly.
 
@@ -55,9 +57,6 @@ Reboot to test everything boots up correctly.
 ## Automatic start of PD patch
 
 The config file /etc/xdg/lxsession/LXDE-pi/autostart determines which PD patch will be loaded on boot. You can edit the last line to choose a different patch.
-e.g
-@purr-data -jack /home/pi/Desktop/Physical_Kidstruments/musicbox/pd/MAIN.pd
-@purr-data -jack /home/pi/Desktop/example.pd
 
 
 ## Automatic shutdown script
@@ -66,7 +65,7 @@ Shutdown and update are handled by plants.watcher.py.  Pd creates temporary file
 
 ## ESP32 capacitance
 
-Purr Data is reading capacitance from two MPR121s via an ESP32 and slip serial.
+PD is reading capacitance from two MPR121s via an ESP32 and slip serial.
 [comport] and [mrpeach/slipdec] are dependencies.
 
 # TODO
