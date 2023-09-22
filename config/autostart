@@ -3,3 +3,4 @@
 @xscreensaver -no-splash
 @qjackctl --start
 @purr-data -jack /home/pi/Desktop/the-plants/MAIN.pd
+@python /home/pi/Desktop/the-plants/config/plants.watcher.py
