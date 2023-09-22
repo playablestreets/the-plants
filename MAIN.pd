@@ -1,16 +1,10 @@
 #N canvas 640 151 807 462 10;
-#X obj 318 120 cnv 15 450 90 empty empty empty 20 12 0 14 #caffcb #404040
-0;
-#X obj 62 252 vradio 15 0 1 4 from-select-instrument to-select-instrument
-empty 0 -8 0 10 #fcfcfc #000000 #000000 1;
-#X obj 51 124 hsl 250 30 0 1 0 0 plant1-slider empty plant1-slider
--2 -8 0 10 #c6ffc7 #000000 #000000 0 1;
-#X obj 51 173 hsl 250 30 0 1 0 0 plant2-slider empty plant2-slider
--2 -8 0 10 #acffac #000000 #000000 0 1;
-#X obj 224 34 cnv 15 306 49 empty empty -={\ THE\ PLANTS\ }=- 20 12
-0 30 #fcffff #17a25f 0;
-#X obj 319 228 cnv 15 450 120 empty empty empty 20 12 0 14 #ffc7c6
-#404040 0;
+#X obj 318 120 cnv 15 450 90 empty empty empty 20 12 0 14 #caffcb #404040 0;
+#X obj 62 252 vradio 15 0 1 4 from-select-instrument to-select-instrument empty 0 -8 0 10 #fcfcfc #000000 #000000 1;
+#X obj 51 124 hsl 250 30 0 1 0 0 plant1-slider empty plant1-slider -2 -8 0 10 #c6ffc7 #000000 #000000 0 1;
+#X obj 51 173 hsl 250 30 0 1 0 0 plant2-slider empty plant2-slider -2 -8 0 10 #acffac #000000 #000000 0 1;
+#X obj 224 34 cnv 15 306 49 empty empty -={\ THE\ PLANTS\ }=- 20 12 0 30 #fcffff #17a25f 0;
+#X obj 319 228 cnv 15 450 120 empty empty empty 20 12 0 14 #ffc7c6 #404040 0;
 #X obj 689 290 s calibrate;
 #X obj 679 241 loadbang;
 #X obj 689 266 del 5000;
@@ -67,33 +61,24 @@ empty 0 -8 0 10 #fcfcfc #000000 #000000 1;
 #X obj 466 127 s shutdown;
 #X obj 538 126 s update;
 #X obj 605 126 s save;
-#X floatatom 113 128 5 0 0 0 - - -, f 5;
-#X obj 467 97 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000;
-#X obj 605 102 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000;
-#X obj 538 102 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000;
+#X floatatom 113 128 5 0 0 0 - - - 0;
+#X obj 467 97 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
+#X obj 605 102 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
+#X obj 538 102 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
 #X obj 626 235 r save;
-#X obj 226 284 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000;
+#X obj 226 284 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
 #X obj 228 258 loadbang;
 #X obj 52 126 s keypad;
 #X obj 233 31 r keypad;
 #X obj 468 31 r keypad;
 #X obj 53 254 r shutdown;
 #X obj 347 258 r update;
-#X obj 49 282 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000;
-#X obj 504 290 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000;
+#X obj 49 282 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
+#X obj 504 290 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
 #X obj 506 264 loadbang;
-#X obj 346 286 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000;
-#X text 718 233 [savetofile newpatch.pd home(or full path)/my/directory(
-| [send pd-mypatch.pd];
-#X obj 626 266 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000;
+#X obj 346 286 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
+#X text 718 233 [savetofile newpatch.pd home(or full path)/my/directory( | [send pd-mypatch.pd];
+#X obj 626 266 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
 #X obj 468 71 sel 48 42 43, f 28;
 #X text 676 70 0 * +;
 #X obj 47 308 sub.watchfile.l2ork cmd.shutdown.tmp;
@@ -132,12 +117,10 @@ empty 0 -8 0 10 #fcfcfc #000000 #000000 1;
 #X restore 340 300 pd keybindings;
 #X obj 440 132 r from-select-instrument;
 #X msg 678 312 \; pd dsp 1;
-#X obj 340 256 tgl 24 1 empty empty Keypad 30 10 0 10 #fcfcfc #000000
-#000000 1 1;
-#X obj 591 264 bng 56 250 50 0 calibrate calibrate calibrate 0 27 0
-10 #fcfcfc #000000 #000000;
-#X floatatom 521 284 5 0 0 0 plant1: plant1 -, f 5;
-#X floatatom 521 308 5 0 0 0 plant2: plant2 -, f 5;
+#X obj 340 256 tgl 24 1 empty empty Keypad 30 10 0 10 #fcfcfc #000000 #000000 1 1;
+#X obj 591 264 bng 56 250 50 0 calibrate calibrate calibrate 0 27 0 10 #fcfcfc #000000 #000000;
+#X floatatom 521 284 5 0 0 0 plant1: plant1 - 0;
+#X floatatom 521 308 5 0 0 0 plant2: plant2 - 0;
 #X text 79 252 [1] bass;
 #X text 79 267 [2] tenor;
 #X text 79 282 [3] alto;
@@ -145,6 +128,7 @@ empty 0 -8 0 10 #fcfcfc #000000 #000000 1;
 #X text 179 252 [0] SHUTDOWN;
 #X text 179 270 [+] SAVE;
 #X text 179 288 [*] UPDATE;
+#X text 86 48 hi;
 #X connect 7 0 8 0;
 #X connect 7 0 16 0;
 #X connect 8 0 6 0;
