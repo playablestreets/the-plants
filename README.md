@@ -62,13 +62,15 @@ e.g
 
 ## Automatic shutdown script
 
-A safe-shutdown Python script is automatically loaded on boot (~/safe_shutdown_Pi.py loaded by /etc/rc.local). This sets a pull-up on pin number 37 (aka GPIO26) and monitors it: If the pin is pulled to ground, the script will shut down the system. 
-You can connect a momentary button between pins 37 (GPIO26) and 39 (GND) for use as a safe shutdown button.
-
-Please press the shutdown button for about 1 second to make sure it registers.
-
+Shutdown and update are handled by plants.watcher.py.  Pd creates temporary files in ./config to trigger shutdown and update actions. 
 
 ## ESP32 capacitance
 
 Purr Data is reading capacitance from two MPR121s via an ESP32 and slip serial.
 [comport] and [mrpeach/slipdec] are dependencies.
+
+# TODO
+
+Move sensor reading into python script.
+Read sensor values in PD via OSC.
+Make fully vanilla compatible.
