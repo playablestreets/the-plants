@@ -56,9 +56,8 @@ Reboot to test everything boots up correctly.
 ## Automatic start of PD patch
 
 The config file /etc/xdg/lxsession/LXDE-pi/autostart determines which PD patch will be loaded on boot. You can edit the last line to choose a different patch.
-e.g, you could change
-@purr-data -jack /home/pi/Desktop/Physical_Kidstruments/musicbox/pd/_MAIN.pd
-to
+e.g
+@purr-data -jack /home/pi/Desktop/Physical_Kidstruments/musicbox/pd/MAIN.pd
 @purr-data -jack /home/pi/Desktop/example.pd
 
 
@@ -69,6 +68,8 @@ You can connect a momentary button between pins 37 (GPIO26) and 39 (GND) for use
 
 Please press the shutdown button for about 1 second to make sure it registers.
 
+
 ## ESP32 capacitance
 
-Purr Data is reading capacitance from esp32 pins 4(A5), 12(A11) and 15(A8).
+Purr Data is reading capacitance from two MPR121s via an ESP32 and slip serial.
+[comport] and [mrpeach/slipdec] are dependencies.
