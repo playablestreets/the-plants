@@ -9,7 +9,7 @@ def watch_for_shutdown_file():
         if os.path.exists(shutdown_file):
             os.remove(shutdown_file)
             print("SHUTDOWN!")
-            os.system("shutdown /s /t 0")
+            os.system("systemctl poweroff")
             break
         time.sleep(5)
 
