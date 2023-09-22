@@ -1,0 +1,16 @@
+#N canvas 104 143 944 511 12;
+#X text 339 40 [savetofile newpatch.pd home(or full path)/my/directory(
+| [send pd-mypatch.pd];
+#X obj 247 73 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000
+#000000;
+#X obj 246 196 list trim;
+#X obj 246 97 t b b, f 35;
+#X obj 247 231 s pd-MAIN.pd;
+#X obj 247 42 inlet;
+#X obj 246 154 list prepend savetofile /home/pi/Desktop/the-plants/MAIN.pd
+;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 6 0;
+#X connect 5 0 1 0;
+#X connect 6 0 2 0;

@@ -1,0 +1,28 @@
+#N canvas 115 103 1028 696 12;
+#X obj 46 56 inlet;
+#X obj 526 58 inlet;
+#X obj 52 111 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000
+#000000;
+#X obj 51 294 list trim;
+#X text 97 55 make file;
+#X text 575 60 delete file;
+#X obj 530 117 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000;
+#X obj 50 340 shell;
+#X obj 52 206 makefilename /home/pi/Desktop/the-plants/config/\$1;
+#X obj 51 242 list prepend touch;
+#X obj 519 298 list trim;
+#X obj 518 344 shell;
+#X obj 520 210 makefilename /home/pi/Desktop/the-plants/config/\$1
+;
+#X obj 519 246 list prepend rm;
+#X connect 0 0 2 0;
+#X connect 1 0 6 0;
+#X connect 2 0 8 0;
+#X connect 3 0 7 0;
+#X connect 6 0 12 0;
+#X connect 8 0 9 0;
+#X connect 9 0 3 0;
+#X connect 10 0 11 0;
+#X connect 12 0 13 0;
+#X connect 13 0 10 0;
