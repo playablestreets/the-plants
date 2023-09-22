@@ -1,3 +1,3 @@
 #!/bin/bash
-sleep 15
+sleep 20
 purr-data -jack /home/pi/Desktop/the-plants/MAIN.pd
