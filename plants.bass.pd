@@ -45,6 +45,8 @@
 #X msg 498 413 fm \$1;
 #X obj 498 332 osc~ 0.01;
 #X obj 498 385 sub.bop.util.scale -1 1 0.1 0.3;
+#X obj 583 205 loadbang;
+#X msg 560 256 1;
 #X connect 1 0 7 0;
 #X connect 1 1 7 1;
 #X connect 2 2 13 0;
@@ -84,3 +86,6 @@
 #X connect 35 0 19 0;
 #X connect 36 0 31 0;
 #X connect 37 0 35 0;
+#X connect 38 0 39 0;
+#X connect 38 0 29 0;
+#X connect 39 0 33 0;

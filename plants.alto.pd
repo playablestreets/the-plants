@@ -54,6 +54,8 @@
 #X obj 1104 246 fm-operator;
 #A saved 195.998 1 1 4 1 0 0 0.59322 0.8 0.2 0.0840336 1 0.0168067;
 #X obj 640 146 sub.bop.util.scale -1 1 0.1 0.6;
+#X obj 585 18 loadbang;
+#X msg 562 69 1;
 #X connect 2 0 5 0;
 #X connect 3 0 17 0;
 #X connect 3 1 17 1;
@@ -99,3 +101,6 @@
 #X connect 41 0 26 1;
 #X connect 42 0 26 1;
 #X connect 43 0 35 0;
+#X connect 44 0 45 0;
+#X connect 44 0 38 0;
+#X connect 45 0 33 0;
