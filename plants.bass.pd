@@ -24,7 +24,7 @@
 #X obj 56 65 declare -path ./pdfm;
 #X text 578 1270 comment;
 #X obj 498 459 fm-operator;
-#A saved 130.813 1 1 1 0 0.166843 0 0.915254 1 0.627119 0.0840336 1 0.092437;
+#A saved 130.813 1 1 1 0 0.162964 0 0.915254 1 0.627119 0.0840336 1 0.092437;
 #X obj 213 34 inlet;
 #X obj 213 64 == \$1;
 #X obj 213 120 switch~;
@@ -43,8 +43,8 @@
 #X obj 560 282 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 560 310 metro 10;
 #X msg 498 413 fm \$1;
-#X obj 498 385 sub.bop.util.scale -1 1 0.01 0.2;
 #X obj 498 332 osc~ 0.01;
+#X obj 498 385 sub.bop.util.scale -1 1 0.1 0.3;
 #X connect 1 0 7 0;
 #X connect 1 1 7 1;
 #X connect 2 2 13 0;
@@ -77,10 +77,10 @@
 #X connect 29 0 30 0;
 #X connect 29 0 19 0;
 #X connect 30 0 19 1;
-#X connect 31 0 36 0;
+#X connect 31 0 37 0;
 #X connect 32 0 31 0;
 #X connect 33 0 34 0;
 #X connect 34 0 32 0;
 #X connect 35 0 19 0;
-#X connect 36 0 35 0;
-#X connect 37 0 31 0;
+#X connect 36 0 31 0;
+#X connect 37 0 35 0;
