@@ -3,4 +3,4 @@
 @xscreensaver -no-splash
 @qjackctl --start
 @python /home/pi/Desktop/the-plants/config/plants.watcher.py
-@lxterminal -e sleep 10 && purr-data -jack /home/pi/Desktop/the-plants/MAIN.pd
+@lxterminal -e "sleep 10 && purr-data -jack /home/pi/Desktop/the-plants/MAIN.pd"
