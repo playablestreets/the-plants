@@ -128,7 +128,6 @@
 #X text 179 252 [0] SHUTDOWN;
 #X text 179 270 [+] SAVE;
 #X text 179 288 [*] UPDATE;
-#X text 86 48 hi;
 #X connect 7 0 8 0;
 #X connect 7 0 16 0;
 #X connect 8 0 6 0;
