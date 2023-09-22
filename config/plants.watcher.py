@@ -3,7 +3,7 @@ import time
 
 def watch_for_shutdown_file():
     directory = os.path.dirname(os.path.realpath(__file__))
-    shutdown_file = os.path.join(directory, "shutdown.tmp")
+    shutdown_file = os.path.join(directory, "cmd.shutdown.tmp")
 
     while True:
         if os.path.exists(shutdown_file):
