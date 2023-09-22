@@ -72,5 +72,5 @@ Purr Data is reading capacitance from two MPR121s via an ESP32 and slip serial.
 # TODO
 
 Move sensor reading into python script.
-Read sensor values in PD via OSC.
+Read sensor values in PD via OSC (this might help: https://github.com/gratefulfrog/PythonSlipOSCServer)
 Make fully vanilla compatible.
