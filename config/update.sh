@@ -1,5 +1,7 @@
 #!/bin/bash
 cd /home/pi/Desktop/the-plants
+echo "stashing changes"
+git stash
 echo "pulling from git"
 git pull
 echo "updating submodules"
