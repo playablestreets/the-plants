@@ -3,7 +3,7 @@
 #X declare -path ./pdfm;
 #X obj 75 43 declare -path ./bop;
 #X text 1400 1931 comment;
-#X floatatom 51 312 5 0 0 0 - - - 0;
+#X floatatom 51 312 5 0 0 0 - - -, f 5;
 #X obj 53 1052 bop.reverb;
 #A saved 0.866848 0.441576 1.8913 0.0251917 1 0 0;
 #X obj 50 371 bop.noteslider;
@@ -15,47 +15,57 @@
 #X obj 280 702 bop.glok;
 #A saved 1;
 #X obj 50 631 bop.synth;
-#A saved 0.01 0.782609 0.277174 0 0.0163043 0 0.0869565 0 0.0128439 0.0927665 0.01 0.376779 0 0.0240124 0.01;
+#A saved 0.01 0.782609 0.277174 0 0.0163043 0 0.0869565 0 0.0128439
+0.0927665 0.01 0.376779 0 0.0240124 0.01;
 #X obj 50 171 r plant1;
 #X obj 50 231 sub.plants.filter-and-scale;
-#X floatatom 281 312 5 0 0 0 - - - 0;
+#X floatatom 281 312 5 0 0 0 - - -, f 5;
 #X obj 280 231 sub.plants.filter-and-scale;
 #X obj 280 171 r plant2;
-#X floatatom 290 201 5 0 0 0 - - - 0;
-#X floatatom 70 201 5 0 0 0 - - - 0;
+#X floatatom 290 201 5 0 0 0 - - -, f 5;
+#X floatatom 70 201 5 0 0 0 - - -, f 5;
 #X obj 53 1255 dac~, f 34;
 #X obj 185 526 unpack;
 #X obj 185 551 - 12;
 #X obj 185 576 pack;
 #X obj 282 992 *~ 0.7;
 #X obj 51 992 *~ 0.7;
-#X obj 97 277 hsl 128 15 0 1 0 0 empty plant1-slider r\ plant1-slider -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 290 278 hsl 128 15 0 1 0 0 empty plant2-slider r\ plant2-slider -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 97 277 hsl 128 15 0 1 0 0 empty plant1-slider r\ plant1-slider
+-2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 290 278 hsl 128 15 0 1 0 0 empty plant2-slider r\ plant2-slider
+-2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 70 68 declare -path ./pdfm;
 #X obj 617 242 fm-operator;
-#A saved 195.998 1 1 1 0 0.35 0.152542 0.5 0.8 0.2 0.10084 0.638655 0.117647;
+#A saved 261.626 1 1 1 0 0.440022 0.152542 0.5 0.8 0.2 0.10084 0.638655
+0.117647;
 #X obj 208 43 inlet;
 #X obj 208 73 == \$1;
 #X obj 208 129 switch~;
-#X obj 208 99 tgl 16 0 empty empty ENABLE 20 10 0 10 #00ff04 #000000 #000000 0 1;
+#X obj 208 99 tgl 16 0 empty empty ENABLE 20 10 0 10 #00ff04 #000000
+#000000 0 1;
 #X obj 640 121 snapshot~;
-#X obj 701 98 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
-#X obj 702 43 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 701 98 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 702 43 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X msg 640 174 fm \$1;
 #X obj 640 93 osc~ 0.01;
 #X obj 782 244 fm-operator;
-#A saved 195.998 1 1 1 0 0 0.01 0.59322 0.8 0.2 0.0840336 1 0.0420168;
-#X msg 758 174 55 127;
+#A saved 261.626 1 1 1 0 0 0.01 0.59322 0.8 0.2 0.0840336 1 0.0420168
+;
 #X obj 618 669 clip~ -0.9 0.9;
 #X obj 618 634 *~ 0.5;
 #X obj 947 246 fm-operator;
-#A saved 195.998 1 1 2 0 0 0.355932 0.59322 0.8 0.2 0.134454 1 0.0336134;
+#A saved 261.626 1 1 2 0 0 0.355932 0.59322 0.8 0.2 0.134454 1 0.0336134
+;
 #X obj 1104 246 fm-operator;
-#A saved 195.998 1 1 4 1 0 0 0.59322 0.8 0.2 0.0840336 1 0.0168067;
+#A saved 261.626 1 1 4 1 0 0 0.59322 0.8 0.2 0.0840336 1 0.0168067
+;
 #X obj 640 146 sub.bop.util.scale -1 1 0.1 0.6;
 #X obj 585 18 loadbang;
 #X msg 562 69 1;
 #X obj 702 71 metro 50;
+#X msg 758 174 60 127;
 #X connect 2 0 5 0;
 #X connect 3 0 17 0;
 #X connect 3 1 17 1;
@@ -80,28 +90,28 @@
 #X connect 22 0 3 0;
 #X connect 23 0 2 0;
 #X connect 24 0 12 0;
-#X connect 26 0 39 0;
+#X connect 26 0 38 0;
 #X connect 27 0 28 0;
 #X connect 28 0 30 0;
 #X connect 30 0 29 0;
 #X connect 30 0 33 0;
-#X connect 31 0 42 0;
+#X connect 31 0 41 0;
 #X connect 32 0 31 0;
-#X connect 33 0 45 0;
+#X connect 33 0 44 0;
 #X connect 34 0 26 0;
 #X connect 35 0 31 0;
 #X connect 36 0 26 1;
-#X connect 37 0 26 0;
-#X connect 37 0 36 0;
-#X connect 37 0 40 0;
-#X connect 37 0 41 0;
-#X connect 38 0 3 0;
-#X connect 38 0 3 1;
-#X connect 39 0 38 0;
+#X connect 37 0 3 0;
+#X connect 37 0 3 1;
+#X connect 38 0 37 0;
+#X connect 39 0 26 1;
 #X connect 40 0 26 1;
-#X connect 41 0 26 1;
-#X connect 42 0 34 0;
-#X connect 43 0 44 0;
-#X connect 43 0 37 0;
-#X connect 44 0 33 0;
-#X connect 45 0 32 0;
+#X connect 41 0 34 0;
+#X connect 42 0 43 0;
+#X connect 42 0 45 0;
+#X connect 43 0 33 0;
+#X connect 44 0 32 0;
+#X connect 45 0 26 0;
+#X connect 45 0 36 0;
+#X connect 45 0 39 0;
+#X connect 45 0 40 0;
