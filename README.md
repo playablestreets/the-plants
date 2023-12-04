@@ -28,17 +28,33 @@ qjackctl --start &
 Set up correct audio outputs etc in Jack.
 
 
-## Install Purr-Data
+
+
+
+## Install Pure Data 0.54+
+As of writing, goto: https://deb.debian.org/debian/pool/main/p/puredata/
+- download and open puredata_0.51.4-1_all.deb
+if that doesn't work, build from source:
 ```
-echo 'deb http://download.opensuse.org/repositories/home:/aggraef/Raspbian_10/ /' | sudo tee /etc/apt/sources.list.d/home:aggraef.list
-curl -fsSL https://download.opensuse.org/repositories/home:aggraef/Raspbian_10/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_aggraef.gpg > /dev/null
-sudo apt update
-sudo apt install purr-data
+sudo apt-get install build-essential automake autoconf libtool gettext
+sudo apt-get install libasound2-dev 
+sudo apt-get install libjack-jackd2-dev
+sudo apt-get install tcl tk wish
+cd /home/pi/Downloads/pd-0.54.1
+./autogen.sh
+./configure --enable-jack
 ```
 
-Open Purr Data and check audio out to Jack is working, Midi in if required. More details: https://agraef.github.io/purr-data/#jgu-packages 
+- Open Pure Data > help > find externals
+- preferences > untick hide foreign architectures
+- Search and install armv6-32 or armv7-32 versions of:
+	- mrpeach
+	- comport
+	- shell
+
+
 ```
-purr-data -jack &
+puredata -jack &
 ```
 
 ## Copy configuration files

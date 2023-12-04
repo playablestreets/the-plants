@@ -166,7 +166,6 @@
 #X msg 266 1032 stop;
 #X obj 211 463 bop.p.onlist;
 #X text 214 489 LIST OF HELD NOTES;
-#X listbox 203 516 20 0 0 0 - - - 0;
 #X connect 1 0 0 0;
 #X connect 1 0 68 0;
 #X connect 3 0 2 0;
@@ -232,7 +231,6 @@
 #X connect 65 0 41 1;
 #X connect 66 0 67 0;
 #X connect 67 0 36 0;
-#X connect 68 0 70 0;
 #X restore 388 214 pd noteslider;
 #X connect 1 0 2 1;
 #X connect 1 1 2 0;

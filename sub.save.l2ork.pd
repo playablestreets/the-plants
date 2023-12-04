@@ -1,4 +1,4 @@
-#N canvas 458 141 944 514 12;
+#N canvas 458 141 944 517 12;
 #X text 339 40 [savetofile newpatch.pd home(or full path)/my/directory(
 | [send pd-mypatch.pd];
 #X obj 247 73 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000
@@ -10,7 +10,7 @@
 #X obj 250 170 canvasinfo;
 #X msg 250 130 dir;
 #X obj 250 240 list prepend savetofile;
-#X obj 251 195 prepend MAIN.pd;
+#X obj 251 195 list prepend MAIN.pd;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
 #X connect 3 0 7 0;
