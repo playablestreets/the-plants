@@ -1,4 +1,4 @@
-#N canvas 4 37 1470 891 10;
+#N canvas 713 37 683 891 10;
 #X declare -path ./bop;
 #X text 2025 1032 comment;
 #X floatatom 537 201 5 0 0 0 - - - 0;
@@ -27,7 +27,7 @@
 #X obj 156 76 declare -path ./bop;
 #X obj 537 257 bop.strum;
 #A saved shuffle 0;
-#A saved duration 0.444;
+#A saved duration 0.45;
 #A saved velocity 0.888;
 #A saved octaves 3;
 #A saved root 60;
@@ -37,10 +37,10 @@
 #A saved mono 0;
 #A saved osc-2-tune 0;
 #A saved osc-1-tune 0;
-#A saved osc-2-gain 0;
+#A saved osc-2-gain 0.821429;
 #A saved osc-2-pulsewidth 0.5;
 #A saved osc-2-wave 0;
-#A saved osc-1-gain 0;
+#A saved osc-1-gain 1;
 #A saved osc-1-pulsewidth 0.5;
 #A saved osc-1-wave 3;
 #A saved noise 0.121429;
@@ -60,7 +60,7 @@
 #A saved reverb-level 0.685714;
 #A saved cutoff 6000;
 #A saved q 0.5;
-#A saved feedback 0.666;
+#A saved feedback 0.521429;
 #X obj 940 376 bop.strum;
 #A saved shuffle 0;
 #A saved duration 0.444;
@@ -79,7 +79,7 @@
 #A saved reverb-level 0.657143;
 #A saved cutoff 6000;
 #A saved q 0.5;
-#A saved feedback 0.666;
+#A saved feedback 0.607143;
 #X obj 1242 751 s~ \$0-drone;
 #X obj 263 294 r~ \$0-drone;
 #X obj 71 289 r~ \$0-drone;
@@ -97,7 +97,7 @@
 #A saved dividend 1;
 #A saved frequency 261.626;
 #A saved detune 0;
-#A saved fm 0.530073;
+#A saved fm 0.410916;
 #X msg 1243 165 fm loop 0.1 10000 0.6 10000;
 #X obj 1429 300 bop.fm~;
 #A saved envelope 1;

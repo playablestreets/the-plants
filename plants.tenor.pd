@@ -1,4 +1,4 @@
-#N canvas 1 37 1479 891 10;
+#N canvas 733 37 655 891 10;
 #X declare -path ./bop;
 #X declare -path ./bop/bop.p;
 #X obj 35 75 declare -path ./bop;
@@ -37,20 +37,20 @@
 #X obj 187 260 r \$0-drone;
 #X obj 1611 781 s~ \$0-drone;
 #X obj 36 327 bop.echo~;
-#A saved reverb-size 0.835714;
+#A saved reverb-size 0.585714;
 #A saved delay-time 0.333;
 #A saved delay-level 0;
 #A saved dry-level 1;
-#A saved reverb-level 1;
+#A saved reverb-level 0.75;
 #A saved cutoff 7000;
 #A saved q 0.5;
-#A saved feedback 0.666;
+#A saved feedback 0.142857;
 #X obj 255 337 bop.echo~;
-#A saved reverb-size 0.814286;
+#A saved reverb-size 0.428571;
 #A saved delay-time 0.333;
 #A saved delay-level 0;
 #A saved dry-level 1;
-#A saved reverb-level 1;
+#A saved reverb-level 0.707143;
 #A saved cutoff 7000;
 #A saved q 0.5;
 #A saved feedback 0.666;
@@ -63,7 +63,7 @@
 #A saved chord 15;
 #A saved noteslider 0;
 #X obj 506 619 bop.casio~;
-#A saved filter 0.5;
+#A saved filter -0.0752688;
 #A saved gain 1;
 #A saved wave-2 0;
 #A saved wave-1 0;
@@ -72,7 +72,7 @@
 #A saved decay 0.3;
 #A saved attack 0.1;
 #X obj 891 389 bop.strum;
-#A saved shuffle 0;
+#A saved shuffle 1;
 #A saved duration 0.444;
 #A saved velocity 0.888;
 #A saved octaves 3;
@@ -97,7 +97,7 @@
 #A saved osc-1-wave 0;
 #A saved noise 1;
 #A saved gain 0.242857;
-#A saved cutoff 2600;
+#A saved cutoff 667.008;
 #A saved q 0.5;
 #A saved slide 0;
 #A saved release 0.2;

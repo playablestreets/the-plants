@@ -1,4 +1,4 @@
-#N canvas 609 37 875 891 10;
+#N canvas 595 37 875 891 10;
 #X declare -path ./bop;
 #X declare -path ./bop/bop.p;
 #X obj 488 62 declare -path ./bop;
@@ -22,7 +22,7 @@
 #X msg 594 326 48 127;
 #X obj 35 444 bop.strum;
 #A saved shuffle 0;
-#A saved duration 0.444;
+#A saved duration 0.914286;
 #A saved velocity 0.888;
 #A saved octaves 3;
 #A saved root 48;
@@ -33,7 +33,7 @@
 #X obj 412 826 s~ \$0-drone;
 #X obj 130 409 r~ \$0-drone;
 #X obj 36 703 bop.casio~;
-#A saved filter 0.5;
+#A saved filter -0.0677419;
 #A saved gain 1;
 #A saved wave-2 0;
 #A saved wave-1 1;
@@ -44,12 +44,12 @@
 #X obj 36 1018 bop.echo~;
 #A saved reverb-size 0.42;
 #A saved delay-time 0.333;
-#A saved delay-level 0.75;
+#A saved delay-level 0.207143;
 #A saved dry-level 1;
 #A saved reverb-level 0.5;
 #A saved cutoff 3000;
 #A saved q 0.5;
-#A saved feedback 0.666;
+#A saved feedback 0.485714;
 #X obj 594 291 loadbang;
 #X obj 412 401 bop.fm~;
 #A saved envelope 1;
@@ -64,7 +64,7 @@
 #A saved dividend 1;
 #A saved frequency 130.813;
 #A saved detune 0;
-#A saved fm 0.171822;
+#A saved fm 0.157165;
 #X obj 594 401 bop.fm~;
 #A saved envelope 1;
 #A saved release 0.278571;

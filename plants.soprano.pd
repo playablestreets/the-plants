@@ -1,4 +1,4 @@
-#N canvas 83 37 1388 891 10;
+#N canvas 669 37 784 891 10;
 #X declare -path ./bop;
 #X declare -path ./bop/bop.p;
 #X obj 36 50 declare -path ./bop;
@@ -37,8 +37,8 @@
 #A saved osc-1-pulsewidth 0.5;
 #A saved osc-1-wave 0;
 #A saved noise 1;
-#A saved gain 1;
-#A saved cutoff 699.886;
+#A saved gain 0.407143;
+#A saved cutoff 4319.93;
 #A saved q 0.5;
 #A saved slide 0;
 #A saved release 0.2;
@@ -54,7 +54,7 @@
 #A saved chord 15;
 #A saved noteslider 0;
 #X obj 947 276 bop.strum;
-#A saved shuffle 0;
+#A saved shuffle 1;
 #A saved duration 0.444;
 #A saved velocity 0.888;
 #A saved octaves 3;
@@ -68,10 +68,10 @@
 #A saved mono 0;
 #A saved osc-2-tune 0;
 #A saved osc-1-tune 0;
-#A saved osc-2-gain 0;
+#A saved osc-2-gain 1;
 #A saved osc-2-pulsewidth 0.5;
 #A saved osc-2-wave 3;
-#A saved osc-1-gain 0;
+#A saved osc-1-gain 1;
 #A saved osc-1-pulsewidth 0.5;
 #A saved osc-1-wave 2;
 #A saved noise 0.271429;
@@ -91,14 +91,14 @@
 #X obj 41 322 r~ \$0-synth;
 #X obj 246 332 r~ \$0-glok;
 #X obj 40 397 bop.echo~;
-#A saved reverb-size 0.607143;
-#A saved delay-time 0.333;
-#A saved delay-level 0;
+#A saved reverb-size 0.9;
+#A saved delay-time 0.6;
+#A saved delay-level 0.464286;
 #A saved dry-level 1;
-#A saved reverb-level 1;
-#A saved cutoff 3000;
+#A saved reverb-level 0.807143;
+#A saved cutoff 6000;
 #A saved q 0.5;
-#A saved feedback 0.666;
+#A saved feedback 0.421429;
 #X obj 246 397 bop.echo~;
 #A saved reverb-size 0.678571;
 #A saved delay-time 0.333;
@@ -107,7 +107,7 @@
 #A saved reverb-level 1;
 #A saved cutoff 3000;
 #A saved q 0.5;
-#A saved feedback 0.666;
+#A saved feedback 0.235714;
 #X obj 1257 161 bop.fm~;
 #A saved envelope 1;
 #A saved release 0.2;
@@ -121,7 +121,7 @@
 #A saved dividend 1;
 #A saved frequency 293.665;
 #A saved detune 0;
-#A saved fm 0.230973;
+#A saved fm 0.137259;
 #X msg 1257 80 62 127 \, fm loop 0.1 10000 0.6 10000 \, cutoff loop 500 5000 5000 5000, f 69;
 #X obj 1490 166 bop.fm~;
 #A saved envelope 1;
