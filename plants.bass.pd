@@ -1,4 +1,4 @@
-#N canvas 0 37 1185 891 10;
+#N canvas 285 37 1185 891 10;
 #X declare -path ./bop;
 #X declare -path ./pdfm;
 #X obj 56 36 declare -path ./bop;
@@ -23,10 +23,10 @@
 #X obj 61 959 throw~ left;
 #X obj 136 961 throw~ right;
 #X text 319 382 noteslider 0 - 1 \; chord 0 - 15 \; shuffle 0 - 1 \; root 0 - 127 \; octaves 0 - 6 \; velocity 0 - 1 \; duration 0 - 1 \;;
-#X msg 315 343 chord 15 \, root 48 \, octaves 3 \, shuffle 0 \, velocity 0.7 \, duration 0.2;
 #X obj 314 314 loadbang;
 #X obj 79 523 newbop/sub.bop.strum;
-#X connect 1 0 23 1;
+#X msg 315 343 chord 15 \, root 48 \, octaves 3 \, shuffle 0 \, velocity 0.7 \, duration 0.7;
+#X connect 1 0 22 1;
 #X connect 2 0 6 0;
 #X connect 2 0 17 0;
 #X connect 3 0 2 0;
@@ -42,6 +42,6 @@
 #X connect 14 0 16 0;
 #X connect 16 0 15 0;
 #X connect 17 0 8 0;
-#X connect 21 0 23 1;
-#X connect 22 0 21 0;
-#X connect 23 1 7 2;
+#X connect 21 0 23 0;
+#X connect 22 1 7 2;
+#X connect 23 0 22 1;
