@@ -121,7 +121,7 @@
 #X restore 340 420 pd keybindings;
 #X obj 440 132 r from-select-instrument;
 #X msg 678 432 \; pd dsp 1;
-#X obj 340 376 tgl 24 1 empty empty Keypad 30 10 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 340 376 tgl 24 1 empty empty Keypad 30 10 0 10 #fcfcfc #000000 #000000 1 1;
 #X obj 591 384 bng 56 250 50 0 calibrate calibrate calibrate 0 27 0 10 #fcfcfc #000000 #000000;
 #X floatatom 521 404 5 0 0 0 plant1: plant1 - 0;
 #X floatatom 521 428 5 0 0 0 plant2: plant2 - 0;
