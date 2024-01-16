@@ -1,4 +1,4 @@
-#N canvas 0 32 1728 1057 10;
+#N canvas 0 0 1728 1052 10;
 #X declare -path ./bop;
 #X obj 75 43 declare -path ./bop;
 #X text 1400 1931 comment;
@@ -26,13 +26,13 @@
 #X obj 129 400 loadbang;
 #X obj 41 546 newbop/sub.bop.strum;
 #X msg 130 429 chord 15 \, root 48 \, octaves 3 \, shuffle 0 \, velocity 0.7 \, duration 0.2;
-#X obj 51 992 *~ 0.9;
 #X obj 460 992 expr~ tanh($v1*2) * 1.5;
+#X obj 51 992 *~ 0.5;
 #X connect 2 0 3 0;
 #X connect 3 0 22 1;
 #X connect 4 0 19 1;
-#X connect 5 0 25 0;
-#X connect 6 0 24 0;
+#X connect 5 0 24 0;
+#X connect 6 0 25 0;
 #X connect 7 0 2 0;
 #X connect 8 0 4 0;
 #X connect 9 0 8 0;
@@ -47,5 +47,5 @@
 #X connect 21 0 23 0;
 #X connect 22 1 6 2;
 #X connect 23 0 22 1;
-#X connect 24 0 16 0;
-#X connect 25 0 17 0;
+#X connect 24 0 17 0;
+#X connect 25 0 16 0;
