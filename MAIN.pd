@@ -135,8 +135,8 @@
 #X obj 66 576 dac~, f 12;
 #X obj 66 430 bop/bop.reverb;
 #A saved 0.669565 0.402174 2 1 1 0 0;
-#X obj 73 386 catch~ left;
-#X obj 162 386 catch~ right;
+#X obj 66 339 catch~ left;
+#X obj 133 382 catch~ right;
 #X obj 326 227 cnv 15 450 90 empty empty empty 20 12 0 14 #caffcb #404040 0;
 #X obj 448 239 r from-select-instrument;
 #X obj 338 287 plants.drone.1 0;
@@ -146,6 +146,8 @@
 #X obj 622 239 plants.drone-control;
 #X obj 340 370 loadbang;
 #X msg 340 391 1;
+#X obj 133 408 expr~ tanh($v1*2) * 1.5;
+#X obj 66 361 expr~ tanh($v1*2) * 1.5;
 #X connect 7 0 8 0;
 #X connect 7 0 16 0;
 #X connect 8 0 6 0;
@@ -156,11 +158,13 @@
 #X connect 17 0 14 0;
 #X connect 29 0 28 0;
 #X connect 29 1 28 1;
-#X connect 30 0 29 0;
-#X connect 31 0 29 1;
+#X connect 30 0 42 0;
+#X connect 31 0 41 0;
 #X connect 33 0 34 0;
 #X connect 33 0 35 0;
 #X connect 33 0 36 0;
 #X connect 33 0 37 0;
 #X connect 39 0 40 0;
 #X connect 40 0 17 0;
+#X connect 41 0 29 1;
+#X connect 42 0 29 0;
