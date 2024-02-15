@@ -1,6 +1,6 @@
-#N canvas 0 0 1728 1052 10;
+#N canvas 526 171 813 668 10;
 #X obj 318 120 cnv 15 450 90 empty empty empty 20 12 0 14 #caffcb #404040 0;
-#X obj 62 252 vradio 15 0 1 4 from-select-instrument to-select-instrument empty 0 -8 0 10 #fcfcfc #000000 #000000 1;
+#X obj 62 252 vradio 15 0 1 4 from-select-instrument to-select-instrument empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 51 124 hsl 250 30 0 1 0 0 plant1-slider empty plant1-slider -2 -8 0 10 #c6ffc7 #000000 #000000 0 1;
 #X obj 51 173 hsl 250 30 0 1 0 0 plant2-slider empty plant2-slider -2 -8 0 10 #acffac #000000 #000000 0 1;
 #X obj 224 34 cnv 15 306 49 empty empty -={\ THE\ PLANTS\ }=- 20 12 0 30 #fcffff #17a25f 0;
@@ -8,7 +8,7 @@
 #X obj 683 435 s calibrate;
 #X obj 673 386 loadbang;
 #X obj 683 411 del 5000;
-#N canvas 76 241 533 492 read-sensors 0;
+#N canvas 76 241 569 645 read-sensors 0;
 #X obj 40 80 loadbang;
 #X msg 40 107 1;
 #X text 105 554 pin 4/A5;
@@ -51,7 +51,7 @@
 #X obj 440 179 plants.tenor 1;
 #X obj 537 180 plants.alto 2;
 #X obj 634 180 plants.soprano 3;
-#N canvas 459 224 1087 543 keybindings 0;
+#N canvas 383 224 1087 543 keybindings 0;
 #X obj 55 44 key;
 #X obj 235 74 sel 49 50 51 52;
 #X obj 236 144 s to-select-instrument;
