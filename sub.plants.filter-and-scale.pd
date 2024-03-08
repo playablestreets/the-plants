@@ -60,7 +60,7 @@
 #X obj 39 691 clip 0 1;
 #X text 259 673 CEILING \; 0.4 = works pretty good \; 0.5 = more sensitive \;;
 #X text 257 613 FLOOR \; 0.85 = clean \; 0.9 = more sensitive \, some bloops \;;
-#X obj 40 660 sub.bop.util.scale 0.87 0.5 0 1;
+#X obj 40 660 sub.bop.util.scale 0.9 0.5 0 1;
 #X connect 0 0 24 1;
 #X connect 1 0 24 0;
 #X connect 4 0 33 0;

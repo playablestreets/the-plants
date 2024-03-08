@@ -5,7 +5,7 @@
 #X obj 56 36 declare -path ./bop;
 #X obj 56 65 declare -path ./pdfm;
 #X obj 551 340 fm-operator;
-#A saved 130.813 1 1 1 0 0.252593 0 0.915254 1 0.627119 0.0840336 1 0.092437;
+#A saved 130.813 1 1 1 0 0.254608 0 0.915254 1 0.627119 0.0840336 1 0.092437;
 #X obj 714 341 fm-operator;
 #A saved 130.813 1 1 4 0.1 0.226891 0 1 1 0.322034 0.109244 0.462185 1;
 #X obj 551 763 clip~ -0.9 0.9;
@@ -25,10 +25,12 @@
 #X obj 551 229 bop.p.blineseq;
 #X obj 551 263 bop.p.bline~;
 #X msg 551 202 loop 0.1 20000 0.3 30000;
+#X obj 518 801 *~ 1.5;
+#X obj 609 808 *~ 1.5;
 #X connect 2 0 5 0;
 #X connect 3 0 2 1;
-#X connect 4 0 10 0;
-#X connect 4 0 11 0;
+#X connect 4 0 20 0;
+#X connect 4 0 21 0;
 #X connect 5 0 4 0;
 #X connect 6 0 3 0;
 #X connect 6 0 7 0;
@@ -43,3 +45,5 @@
 #X connect 17 0 18 0;
 #X connect 18 1 8 0;
 #X connect 19 0 17 0;
+#X connect 20 0 10 0;
+#X connect 21 0 11 0;
