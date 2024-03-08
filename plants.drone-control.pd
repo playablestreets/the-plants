@@ -1,4 +1,4 @@
-#N canvas 5 42 439 696 12;
+#N canvas 5 42 656 696 12;
 #X obj 99 95 r plant1;
 #X obj 180 94 r plant2;
 #X obj 135 192 +;
@@ -17,6 +17,8 @@
 #X msg 236 191 read plants.drone-commands.txt;
 #X obj 236 168 loadbang;
 #X obj 134 377 delay 2000;
+#X obj 22 26 hsl 128 15 0 1 0 0 empty plant1-slider r\ plant1-slider -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 394 32 hsl 128 15 0 1 0 0 empty plant2-slider r\ plant2-slider -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 8 0;
@@ -36,3 +38,5 @@
 #X connect 15 0 14 0;
 #X connect 16 0 15 0;
 #X connect 17 0 7 0;
+#X connect 18 0 2 0;
+#X connect 19 0 3 0;

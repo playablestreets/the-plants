@@ -7,7 +7,7 @@
 #X floatatom 64 312 5 0 0 0 - - - 0;
 #X obj 65 280 expr if($f1 < 0.07 \, 0 \, 0.07);
 #X obj 64 642 bop.casio;
-#A saved 1.75 0 0.9 0.01 0.793478 0.228261 1 0 0 0 0;
+#A saved 1.75 0 -0.0677419 0.01 0.793478 0.228261 1 0 0 0 0;
 #X msg 284 551 filter \$1;
 #X obj 63 148 r plant1;
 #X obj 82 202 hsl 128 15 0 1 0 0 empty plant1-slider r\ plant1-slider -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
@@ -29,8 +29,8 @@
 #X msg 314 343 chord 15 \, root 48 \, octaves 3 \, shuffle 0 \, velocity 0.7 \, duration 3;
 #X text 623 519 Added this to turn the note off override the duration;
 #X text 671 352 Changed the duration as the it was cutting out the held note;
-#X obj 63 930 *~ 1.5;
-#X obj 138 932 *~ 1.5;
+#X obj 64 930 *~ 3;
+#X obj 138 932 *~ 3;
 #X connect 1 0 20 1;
 #X connect 2 0 4 0;
 #X connect 2 0 15 0;
