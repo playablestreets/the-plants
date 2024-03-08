@@ -1,4 +1,4 @@
-#N canvas 285 37 1185 891 10;
+#N canvas 601 51 1185 891 10;
 #X declare -path ./bop;
 #X declare -path ./pdfm;
 #X obj 56 36 declare -path ./bop;
@@ -7,7 +7,7 @@
 #X floatatom 64 312 5 0 0 0 - - - 0;
 #X obj 65 280 expr if($f1 < 0.07 \, 0 \, 0.07);
 #X obj 64 642 bop.casio;
-#A saved 1.29348 0 -0.0677419 0.01 0.793478 0.228261 1 0.266304 0 0 0;
+#A saved 1.75 0 -0.0677419 0.01 0.793478 0.228261 1 0 0 0 0;
 #X msg 284 551 filter \$1;
 #X obj 63 148 r plant1;
 #X obj 82 202 hsl 128 15 0 1 0 0 empty plant1-slider r\ plant1-slider -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
@@ -23,11 +23,17 @@
 #X text 319 382 noteslider 0 - 1 \; chord 0 - 15 \; shuffle 0 - 1 \; root 0 - 127 \; octaves 0 - 6 \; velocity 0 - 1 \; duration 0 - 1 \;;
 #X obj 314 314 loadbang;
 #X obj 79 523 newbop/sub.bop.strum;
-#X msg 315 343 chord 15 \, root 48 \, octaves 3 \, shuffle 0 \, velocity 0.7 \, duration 0.7;
+#X obj 551 545 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
+#X msg 550 573 48 0;
+#X obj 551 520 select 0;
+#X msg 314 343 chord 15 \, root 48 \, octaves 3 \, shuffle 0 \, velocity 0.7 \, duration 3;
+#X text 623 519 Added this to turn the note off override the duration;
+#X text 671 352 Changed the duration as the it was cutting out the held note;
 #X connect 1 0 20 1;
 #X connect 2 0 4 0;
 #X connect 2 0 15 0;
 #X connect 3 0 1 0;
+#X connect 3 0 23 0;
 #X connect 4 0 3 0;
 #X connect 5 0 16 0;
 #X connect 5 1 17 0;
@@ -38,6 +44,9 @@
 #X connect 12 0 14 0;
 #X connect 14 0 13 0;
 #X connect 15 0 6 0;
-#X connect 19 0 21 0;
+#X connect 19 0 24 0;
 #X connect 20 1 5 2;
-#X connect 21 0 20 1;
+#X connect 21 0 22 0;
+#X connect 22 0 5 2;
+#X connect 23 0 21 0;
+#X connect 24 0 20 1;
