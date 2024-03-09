@@ -1,4 +1,4 @@
-#N canvas 751 32 975 1057 10;
+#N canvas 0 32 1728 1057 10;
 #X obj 306 120 cnv 15 450 90 empty empty empty 20 12 0 14 #caffcb #404040 0;
 #X obj 503 36 vradio 15 0 1 4 from-select-instrument to-select-instrument empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 28 114 hsl 250 30 0 1 0 0 plant1-slider empty plant1-slider -2 -8 0 10 #c6ffc7 #000000 #000000 0 1;
@@ -132,7 +132,7 @@
 #X text 620 37 [0] SHUTDOWN;
 #X text 620 55 [+] SAVE;
 #X text 620 73 [*] UPDATE;
-#X obj 26 586 dac~, f 14;
+#X obj 23 644 dac~, f 14;
 #X obj 26 248 bop/bop.reverb;
 #A saved 0.669565 0.402174 2 0.831522 0.836957 0 0;
 #X obj 26 217 catch~ left;
@@ -242,8 +242,10 @@
 #X connect 3 0 1 0;
 #X connect 3 0 7 0;
 #X coords 0 -1 1 1 85 180 2 100 100;
-#X restore 26 388 pd;
+#X restore 23 446 pd;
 #X f 13;
+#X obj 25 393 *~ 4;
+#X obj 94 393 *~ 4;
 #X connect 7 0 8 0;
 #X connect 7 0 16 0;
 #X connect 8 0 6 0;
@@ -252,8 +254,8 @@
 #X connect 15 0 12 0;
 #X connect 15 0 13 0;
 #X connect 17 0 14 0;
-#X connect 29 0 41 0;
-#X connect 29 1 41 1;
+#X connect 29 0 42 0;
+#X connect 29 1 43 0;
 #X connect 30 0 29 0;
 #X connect 31 0 29 1;
 #X connect 33 0 34 0;
@@ -264,3 +266,5 @@
 #X connect 40 0 17 0;
 #X connect 41 0 28 0;
 #X connect 41 1 28 1;
+#X connect 42 0 41 0;
+#X connect 43 0 41 1;
