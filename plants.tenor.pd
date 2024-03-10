@@ -7,7 +7,7 @@
 #X floatatom 481 326 5 0 0 0 - - - 0;
 #X floatatom 104 312 5 0 0 0 - - - 0;
 #X obj 104 683 bop.casio;
-#A saved 0 3.61413 -0.0752688 0.0340886 1 0.891304 0 0 0 0 1;
+#A saved 0 3.61413 -0.0752688 0.01 1 1 0 0.36413 0 0 0;
 #X msg 271 382 filter \$1;
 #X msg 484 426 wave-1 \$1;
 #X obj 487 373 * 7;
@@ -33,7 +33,7 @@
 #X obj 42 539 newbop/sub.bop.strum;
 #X msg 178 462 chord 15 \, root 48 \, octaves 3 \, shuffle 0 \, velocity 0.7 \, duration 0.2, f 14;
 #X obj 360 1050 *~ 1;
-#X obj 110 1060 *~ 0.4;
+#X obj 110 1060 *~ 0.6;
 #X connect 2 0 27 1;
 #X connect 3 0 8 0;
 #X connect 3 0 11 0;
