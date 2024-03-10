@@ -244,7 +244,8 @@
 #X coords 0 -1 1 1 85 180 2 100 100;
 #X restore 23 446 pd;
 #X f 13;
-#X obj 25 393 *~ 4;
+#X obj 25 393 *~ 3;
+#X obj 96 395 *~ 3;
 #X connect 7 0 8 0;
 #X connect 7 0 16 0;
 #X connect 8 0 6 0;
@@ -254,7 +255,7 @@
 #X connect 15 0 13 0;
 #X connect 17 0 14 0;
 #X connect 29 0 42 0;
-#X connect 29 1 42 0;
+#X connect 29 1 43 0;
 #X connect 30 0 29 0;
 #X connect 31 0 29 1;
 #X connect 33 0 34 0;
@@ -266,4 +267,4 @@
 #X connect 41 0 28 0;
 #X connect 41 1 28 1;
 #X connect 42 0 41 0;
-#X connect 42 0 41 1;
+#X connect 43 0 41 1;
